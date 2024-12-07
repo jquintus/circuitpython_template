@@ -23,6 +23,19 @@ Template repository for quickly creating new circuit python projects with stubs 
 10. The device will reboot one more time and you will see another new drive on your computer named `CIRCUITPY`
 11. Done.
 
+# Cloning this repo directly to your board
+
+By default, git wants to clone repositories to folders, 
+so cloning directly to the root of a filesystem requires a few extra steps.
+
+```batch
+cd d:\
+git init
+git remote add origin https://github.com/jquintus/<repo_name>
+git pull origin main
+git branch --set-upstream-to=origin/main main
+```
+
 # Update the Circuit Python Bundles
 
 1. Go to the [CircuitPython](https://circuitpython.org/libraries) Website
